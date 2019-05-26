@@ -1,0 +1,9 @@
+package com.anshu.practices.patterns.creation;
+
+public abstract class AbstractDataStructureFactory {
+	
+	DataStructure create(DataStructureType dstype) {
+		
+	}
+
+}

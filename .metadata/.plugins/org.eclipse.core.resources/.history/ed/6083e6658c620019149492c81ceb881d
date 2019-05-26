@@ -1,0 +1,5 @@
+package com.anshu.practices.patterns.creation;
+
+public class AbstractFactory {
+
+}

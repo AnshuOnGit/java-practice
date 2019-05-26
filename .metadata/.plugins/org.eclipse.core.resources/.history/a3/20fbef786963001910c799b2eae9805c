@@ -1,0 +1,39 @@
+package com.anshu.practices.patterns.creation;
+
+import com.anshu.practices.patterns.creation.BinaryTree.Node;
+import com.anshu.practices.patterns.utils.DectoBinary;
+
+public class TreeFactory implements DataStructureFactory {
+
+	public DataStructure create(Type type, int[] input) {
+		switch (type) {
+		case BINARY: {
+			BinaryTree bt = new BinaryTree();
+			Node rootNode = new Node();
+			rootNode.setValue(input[0]);
+			bt.setRoot(rootNode);
+
+			for (int i = 1; i < input.length; i++) {
+				Node node = new Node();
+				node.setValue(input[i]);
+				int navLength = (int) (Math.log(i + 1) / Math.log(2));
+				int base = (int) Math.pow(2, navLength);
+				if(i - base + 1 < 0) {
+					System.out.println("caught == " + i + "---"+ navLength+ "---"+ base);
+				}
+				int[] binMagicNumber = DectoBinary.getBinary(i - base +1);
+				Node tempLoc = bt.getRoot();
+				
+				while(navLength >=0) {
+					if(magicNumber%2 )
+					navLength--;
+				}
+			}
+			return bt;
+		}
+		default:
+			return null;
+		}
+	}
+
+}

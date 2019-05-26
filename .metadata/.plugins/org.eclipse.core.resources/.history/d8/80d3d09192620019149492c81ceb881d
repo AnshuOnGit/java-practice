@@ -1,0 +1,13 @@
+package com.anshu.practices.patterns.creation;
+
+public class App {
+	
+	public static void main(String[] args) {
+		AbstractFactory factory = new AbstractFactory();
+		DataStructureFactory treeFactory = factory.getFactory(DataStructureType.TREE);
+		int[] input = {1};
+		DataStructure binaryTree = treeFactory.create(Type.BINARY, input);
+		binaryTree.display();
+	}
+
+}

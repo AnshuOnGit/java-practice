@@ -1,0 +1,10 @@
+package com.anshu.practices.patterns.creation;
+
+public abstract class AbstractDataStructureFactory implements DataStructureFactory {
+
+	public DataStructureFactory create(DataStructureType dsType) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

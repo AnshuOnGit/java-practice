@@ -1,0 +1,11 @@
+package anshu.goes.crazy.on.patternmatch;
+
+import org.junit.Test;
+
+public class PatternMatchTest {
+	
+	@Test
+	public void randomTest() {
+	}
+
+}

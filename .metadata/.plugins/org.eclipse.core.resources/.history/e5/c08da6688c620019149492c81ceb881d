@@ -1,0 +1,14 @@
+package com.anshu.practices.patterns.creation;
+
+public class AbstractFactory {
+	
+	public DataStructureFactory getFactory(DataStructureType DSType) {
+		switch(DSType) {
+		case TREE:
+			return new TreeFactory();
+	    default:
+	    	return null;
+		}
+	}
+
+}

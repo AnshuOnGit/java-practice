@@ -1,0 +1,10 @@
+package com.anshu.practices.patterns.creation;
+
+public enum DataStructureType {
+	
+	BINARY_TREE,
+	NARY_TREE,
+	SINGLY_LINKEDLIST,
+	DOUBLY_LINKEDLIST,
+	GRAPH
+}

@@ -1,0 +1,46 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+public class CountTriplet {
+	
+	private static long  countTriplets(int sp, int tsp, List<Long> iarr, long r, List<Long> parr, long count ) {
+		if(sp >= r-3+1 || tsp > iarr.size() -1) {return count;}
+		else {
+			tsp = tsp +1;
+			if(iarr.get(tsp) % r == 0 && parr.get(parr.size() - 1) != iarr.get(tsp)) {
+		           	parr.add(iarr.get(tsp));
+		           	
+		         if(parr.size() == 3) {
+		        	 sp = sp+1;
+		        	 tsp = sp;
+		        	 parr = new ArrayList<Long>();
+		        	 countTriplets(sp, tsp, iarr, r, parr,count +1);
+		         } else {
+		        	 countTriplets(sp, tsp, iarr, r, parr,count);
+		         } 	
+			}else {
+				countTriplets(sp, tsp, iarr, r, parr,count);
+			}
+		}
+	}
+
+    // Complete the countTriplets function below.
+    static long countTriplets(List<Long> arr, long r) {
+       return 1;
+
+    }
+
+    public static void main(String[] args) throws IOException {
+
+        long ans = countTriplets(arr, r);
+    }
+}

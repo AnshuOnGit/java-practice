@@ -1,0 +1,53 @@
+package com.anshu.practices.patterns.creation;
+
+public class BinaryTree implements DataStructure {
+	
+	static class Node{
+		private int value;
+		private Node leftSubTree;
+		private Node rightSubTree;
+		public int getValue() {
+			return value;
+		}
+		public void setValue(int value) {
+			this.value = value;
+		}
+		public Node getLeftSubTree() {
+			return leftSubTree;
+		}
+		public void setLeftSubTree(Node leftSubTree) {
+			this.leftSubTree = leftSubTree;
+		}
+		public Node getRightSubTree() {
+			return rightSubTree;
+		}
+		public void setRightSubTree(Node rightSubTree) {
+			this.rightSubTree = rightSubTree;
+		}
+		
+		public void display() {
+			if(this.getLeftSubTree() != null) {
+				this.getLeftSubTree().display();
+			}
+			System.out.println(this.getValue());
+			if(this.getRightSubTree() != null) {
+				this.getRightSubTree().display();
+			}
+		}
+	}
+	
+	private Node root;
+
+	public Node getRoot() {
+		return root;
+	}
+
+	public void setRoot(Node root) {
+		this.root = root;
+	}
+
+	public void display() {
+		this.root.display();
+	}
+	
+}

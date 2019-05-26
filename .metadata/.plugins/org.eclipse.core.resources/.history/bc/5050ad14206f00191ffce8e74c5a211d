@@ -1,0 +1,50 @@
+import java.io.ObjectInputStream.GetField;
+import java.util.ArrayList;
+
+import java.util.List;
+
+public class PatternMatch {
+
+	public static int[] simplePatternMatch(char[] pat, char[] text) {
+		List<Integer> out = new ArrayList<>();
+		int patternCounter = 0;
+		for (int i = 0; i < text.length; i++) {
+			if (patternCounter == pat.length - 1) {
+				out.add(i - pat.length + 1);
+				patternCounter = 0;
+			}
+			if (text[i] == pat[patternCounter]) {
+				patternCounter++;
+			}
+		}
+		int[] outArray = new int[out.size()];
+		for (int i = 0; i < out.size(); i++) {
+			outArray[i] = out.get(i);
+		}
+		return outArray;
+	}
+	
+	public static int[] getPrefixAndSuffix(char[] pat) {
+		int[] out = new int[pat.length];
+		for(int i =0; i < pat.length; i++) {
+			int count = 0;
+			for(int j =0; j <= i; j++ ) {
+				if(pat[j] == pat[pat.length -j -1]) {
+					count++;
+				}else {
+					count = 0;
+					break;
+				}
+			}
+			out[i] = count;
+		}
+		return out;
+	}
+
+	public static void main(String[] args) {
+		int[] result = getPrefixAndSuffix("TEST".toCharArray());
+		for(int elem: result) {
+			System.out.println(elem);
+		}
+	}
+}

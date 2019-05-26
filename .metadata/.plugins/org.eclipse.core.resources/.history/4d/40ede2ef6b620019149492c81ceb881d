@@ -1,0 +1,24 @@
+package com.anshu.practices.patterns.creation;
+
+import com.anshu.practices.patterns.creation.BinaryTree.Node;
+
+public class TreeFactory implements DataStructureFactory {
+
+	public DataStructure create(Type type, int[] input) {
+		switch (type) {
+		case BINARY: {
+			BinaryTree bt = new BinaryTree();
+			if (input.length > 1) {
+				Node root = new Node();
+				root.setValue(input[0]);
+				bt.setRoot(root);
+				
+			}
+			return bt;
+		}
+		default:
+			return null;
+		}
+	}
+
+}

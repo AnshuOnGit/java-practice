@@ -1,0 +1,22 @@
+package anshu.goes.crazy.on.sorting;
+
+public class MergeSorter implements Sorter {
+	
+	public static void mergeSort(int[] data) {
+		
+	}
+	
+	public static void merge(int[] data1, int[] data2) {
+		int i =0, j = 0;
+		while(i < data1.length && j < data2.length) {
+			if()
+		}
+	}
+
+	@Override
+	public void sort(int[] data) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

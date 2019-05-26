@@ -1,0 +1,14 @@
+package com.anshu.practices.patterns.creation;
+
+public class TreeFactory implements DataStructureFactory {
+
+	public DataStructure create(Type type, int[] input) {
+		switch (type) {
+		case BINARY:
+			return new BinaryTree();
+		default:
+			return null;
+		}
+	}
+
+}

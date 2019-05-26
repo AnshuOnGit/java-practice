@@ -1,0 +1,52 @@
+package anshu.goes.crazy.on.sorting;
+
+public class MergeSorter implements Sorter {
+	
+	public static void mergeSort(int[] data) {
+		
+	}
+	
+	public static int[] merge(int[] data1, int[] data2) {
+		int i =0, j = 0, count =0;
+		int[] out = new int[data1.length + data2.length];
+		while(i < data1.length && j < data2.length && count < data1.length + data2.length) {
+			if(data1[i] <= data2[j]) {
+				out[count] = data1[i];
+				i++;
+			}else {
+				out[count] = data2[j];
+				j++;
+			}
+			count++;
+		}
+		
+		if(i < data1.length) {
+			while(i < data1.length) {
+				out[count] = data1[i];
+				i++;count++;
+			}
+		}else if(j < data2.length) {
+			while(j < data2.length) {
+				out[count] = data2[j];
+				j++;count++;
+			}
+		}
+		return out;
+	}
+
+	@Override
+	public void sort(int[] data) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static void main(String[] args) {
+		int[] data1 = {1,12,32};
+		int[] data2= {4,13, 41,45,76};
+		int[] result = merge(data1, data2);
+		for(int elem : result) {
+			System.out.println(elem);
+		}
+	}
+
+}

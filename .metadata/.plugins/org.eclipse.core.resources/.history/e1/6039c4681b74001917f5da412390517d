@@ -1,0 +1,75 @@
+package anshu.goes.crazy.on.sorting;
+
+import static org.junit.Assert.assertTrue;
+
+public class Quicksorter implements Sorter{
+
+	public static void quickSort(int[] input, int first, int last, boolean aesc) {
+		if (aesc) {
+			if (first < last - 1) {
+				int start = first;
+				int end = last - 1;
+				int pivotIndex = (start + end) / 2;
+				int pivot = input[pivotIndex];
+				while (start < end && start < last && end >= first) {
+					if (input[start] >= pivot && input[end] < pivot) {
+						swap(input, start, end);
+						start++;
+						end--;
+					}
+					if (input[start] <= pivot) {
+						start++;
+					}
+					if (input[end] > pivot) {
+						end--;
+					}
+
+				}
+				quickSort(input, first, start, aesc);
+				quickSort(input, start+1, last, aesc);
+			}
+		} else {
+			if (first < last - 1) {
+				int start = first;
+				int end = last - 1;
+				int pivotIndex = (start + end) / 2;
+				int pivot = input[pivotIndex];
+				while (start < end && start < last && end >= first) {
+					if (input[start] < pivot || input[end] >= pivot) {
+						swap(input, start, end);
+					}
+					if (input[start] > pivot) {
+						start++;
+					}
+					if (input[end] <= pivot) {
+						end--;
+					}
+
+				}
+				quickSort(input, first, start, aesc);
+				quickSort(input, start +1, last, aesc);
+			}
+		}
+	}
+
+	public static void swap(int[] input, int i, int j) {
+		assertTrue(0 <= i && j < input.length);
+		int temp = input[i];
+		input[i] = input[j];
+		input[j] = temp;
+	}
+
+	public static void main(String[] args) {
+		int[] toTest = {2,1,3};
+		quickSort(toTest, 0, 3, true);
+		for (int elem : toTest) {
+			System.out.println(elem);
+		}
+	}
+
+	@Override
+	public void sort(int[] data) {
+		quickSort(data, 0, data.length, false);
+	}
+
+}

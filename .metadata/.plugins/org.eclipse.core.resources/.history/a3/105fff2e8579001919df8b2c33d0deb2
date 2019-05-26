@@ -1,0 +1,16 @@
+package anshu.goes.crazy.on.patternmatch;
+
+import static org.junit.Assert.assertArrayEquals;
+
+import org.junit.Test;
+
+public class PatternMatchTest {
+	
+	@Test
+	public void randomTest() {
+		int[] patMatchResult = PatternMatch.simplePatternMatch("aabaa", "aabaabbbaabaaaaaabaabaaaaa");
+		int[] expResult = {0,8,15};
+		assertArrayEquals(expResult, patMatchResult);
+	}
+
+}

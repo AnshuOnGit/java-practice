@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PatternMatchTest" project="crazy2" tests="7" started="7" failures="0" errors="0" ignored="0">
+  <testsuite name="anshu.goes.crazy.on.patternmatch.PatternMatchTest" time="0.048">
+    <testcase name="randomTestForsimplePatternMatch" classname="anshu.goes.crazy.on.patternmatch.PatternMatchTest" time="0.047"/>
+    <testcase name="randomTestForsimplePatternMatch1" classname="anshu.goes.crazy.on.patternmatch.PatternMatchTest" time="0.0"/>
+    <testcase name="randomTestForsimplePatternMatch2" classname="anshu.goes.crazy.on.patternmatch.PatternMatchTest" time="0.0"/>
+    <testcase name="randomTestForsimplePatternMatch3" classname="anshu.goes.crazy.on.patternmatch.PatternMatchTest" time="0.0"/>
+    <testcase name="randomTestForsimplePatternMatch4" classname="anshu.goes.crazy.on.patternmatch.PatternMatchTest" time="0.0"/>
+    <testcase name="randomTestForsimplePatternMatch5" classname="anshu.goes.crazy.on.patternmatch.PatternMatchTest" time="0.0"/>
+    <testcase name="randomTestForsimplePatternMatch6" classname="anshu.goes.crazy.on.patternmatch.PatternMatchTest" time="0.001"/>
+  </testsuite>
+</testrun>

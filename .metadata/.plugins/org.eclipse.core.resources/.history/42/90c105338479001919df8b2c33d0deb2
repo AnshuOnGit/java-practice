@@ -1,0 +1,11 @@
+package crazy2;
+
+import org.junit.Test;
+
+public class PatternMatchTest {
+	
+	@Test
+	public void randomTest() {
+	}
+
+}

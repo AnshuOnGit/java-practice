@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PatternMatchTest" project="crazy2" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="anshu.goes.crazy.on.patternmatch.PatternMatchTest" time="0.0">
+    <testcase name="randomTest" classname="anshu.goes.crazy.on.patternmatch.PatternMatchTest" time="0.001"/>
+  </testsuite>
+</testrun>

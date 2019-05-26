@@ -1,0 +1,16 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class ConvertNumToBase7 {
+	
+	public int[] convert(int n) {
+		List<Integer> outList = new ArrayList();
+		int quo = n;
+		while(quo != 0) {
+			int remainder = n%7;
+			outList.add(remainder);
+		}
+		return outList.toArray();
+	}
+
+}

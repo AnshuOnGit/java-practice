@@ -1,0 +1,54 @@
+package anshu.goes.crazy.on.patternmatch;
+
+import static org.junit.Assert.assertArrayEquals;
+
+import org.junit.Ignore;
+import org.junit.Test;
+
+public class PatternMatchTest {
+	
+	@Test
+	@Ignore
+	public void randomTestForSimplePatternMatch() {
+		int[] patMatchResult = PatternMatch.simplePatternMatch("aabaa", "aabaabbbaabaaaaaabaabaaaaa");
+		int[] expResult = {0,8,15,18};
+		assertArrayEquals(expResult, patMatchResult);
+	}
+	
+	@Test
+	public void randomTestForCleverPatternMatch() {
+		int[] patMatchResult = PatternMatch.cleverPatternMatch("aabaa", "aabaabbbaabaaaaaabaabaaaaa");
+		int[] expResult = {0,8,15,18};
+		assertArrayEquals(expResult, patMatchResult);
+	}
+	
+	@Test
+	@Ignore
+	public void randomTestForSimplePatternMatch1() {
+		int[] patMatchResult = PatternMatch.simplePatternMatch("aabaa", "aabaabaa");
+		int[] expResult = {0,3};
+		assertArrayEquals(expResult, patMatchResult);
+	}
+	
+	@Test
+	public void randomTestForCleverPatternMatch1() {
+		int[] patMatchResult = PatternMatch.cleverPatternMatch("aabaa", "aabaabaa");
+		int[] expResult = {0,3};
+		assertArrayEquals(expResult, patMatchResult);
+	}
+	
+	@Test
+	public void randomTestForCleverPatternMatch2() {
+		int[] patMatchResult = PatternMatch.cleverPatternMatch("aabaa", "aabbaabaa");
+		int[] expResult = {4};
+		assertArrayEquals(expResult, patMatchResult);
+	}
+	
+	@Test
+	public void randomTestForCleverPatternMatch3() {
+		int[] patMatchResult = PatternMatch.cleverPatternMatch("aabaa", "aabaabaaabbaaabaa");
+		int[] expResult = {0,12};
+		assertArrayEquals(expResult, patMatchResult);
+	}
+
+}

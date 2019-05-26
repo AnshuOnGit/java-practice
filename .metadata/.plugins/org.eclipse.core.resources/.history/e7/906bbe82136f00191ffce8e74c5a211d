@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+
+import java.util.List;
+
+public class PatternMatch {
+
+	public static int[] simplePatternMatch(char[] pat, char[] text) {
+		List<Integer> out = new ArrayList<>();
+		int patternCounter = 0;
+		for (int i = 0; i < text.length; i++) {
+			if (patternCounter == pat.length) {
+				out.add(i - pat.length + 1);
+			}
+			if (text[i] == pat[patternCounter]) {
+				patternCounter++;
+			}
+		}
+
+		int[] outArray = new int[out.size()];
+		for (int i = 0; i < out.size(); i++) {
+			outArray[i] = out.get(i);
+		}
+		return outArray;
+	}
+
+	public static void main(String[] args) {
+		int[] result = simplePatternMatch("THIS IS A TEST".toCharArray(), "TEST".toCharArray());
+		for (int i = 0; i < result.length; i++) {
+			System.out.println(result[i]);
+		}
+	}
+}

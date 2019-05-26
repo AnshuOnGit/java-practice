@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="crazy2.SplitSetsInTwo"/>
+    <fullyQualifiedTypeName name="anshu.goes.crazy.on.concurrency.Indeterministic"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="anshu.goes.crazy.on.concurrency.ProducerConsumerProblem"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.Semaphore"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="crazy2.QuickSort"/>
+    <fullyQualifiedTypeName name="com.anshu.practices.patterns.creation.AbstractFactory"/>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="org.junit.Before"/>
+    <fullyQualifiedTypeName name="com.anshu.practices.patterns.utils.DectoBinary"/>
+    <fullyQualifiedTypeName name="org.utility.DectoBinaryTest"/>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="com.atlassian.interviews.uag.api.GroupService"/>
+    <fullyQualifiedTypeName name="LearnOptional"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="anshu.goes.crazy.on.sorting.MergeSorter"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+</qualifiedTypeNameHistroy>

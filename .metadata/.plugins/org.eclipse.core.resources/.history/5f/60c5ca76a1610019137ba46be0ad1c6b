@@ -1,0 +1,10 @@
+package com.anshu.practices.patterns.creation;
+
+public class TreeFactory implements DataStructureFactory {
+
+	public DataStructure create(Type type, int[] input) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

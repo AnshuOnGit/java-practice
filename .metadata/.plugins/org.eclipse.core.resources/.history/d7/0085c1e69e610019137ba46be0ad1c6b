@@ -1,0 +1,11 @@
+package com.anshu.practices.patterns.creation;
+
+public abstract class AbstractDataStructureFactory{
+
+	public DataStructureFactory create(DataStructureType dsType) {
+		switch(dsType) {
+		case TREE:
+		}
+	}
+
+}
